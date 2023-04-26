@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: gainsboro;
+    }
+    .ontop {
+        background-color: white;
+    }
+    .ontop img {
+        width: 190px;
+        height: 50px;
+        margin: 12px 20px;
+    }
+    .justfor-content {
+        width: 100%;
+        height: 80px;
+    }
+    .justfor {
+        height: 100px;
+        padding: 20px;
+        display: flex;
+        color: darkblue;
+        justify-content: center;
+        gap: 10px;
+    }
+    .justfor img {
+        height: 60px;
+        padding: 0 auto;
+    }
+    .content {
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .product-content {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+    .product-img img {
+        width: 100%;
+        border-radius: 20px;
+        height: 300px;
+        object-fit: fill;
+       
+    }
+    .product-des {
+        border-radius: 20px;
+        margin: 12px
+    }
+    .product-item {
+        border-radius: 20px;
+     
+        border: 1px solid rgb(255, 255, 255);
+        background-color: azure;
+    }
+    .product-item h1 {
+        color: rgb(216, 55, 55);
+    }
+    .product-item h4 {
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+    }
+    .product-item s {
+        color: grey;
+    }
+    .product-item p {
+        color: black;
+    }
+
+    .discount {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+<body>
+    <!--Start on the top-->
+    <div class="ontop">
+        <img src="lazada logo.png" alt="">
+    </div>
+    
+    <!--Just For Content-->
+    <div class="justfor-content">
+        <div class="justfor">
+
+            <img src="logo laza.png" alt="">
+            <h1>Just For You</h1>
+            <img src="logo laza.png" alt="">
+    
+        </div>
+    </div>
+   
+    <!--Content-->
+    <div class="content">
+        <div class="product-content">
+
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="watchh.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>นาฬิกา</h4><br>
+                    <h1>฿999</h1>
+                    <div class="discount">
+                        <s>2990</s>
+                        <p>-67%</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="swim.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>สระน้ำ</h4><br>
+                    <h1>฿1000</h1>
+                    <div class="discount">
+                        <s>2000 </s>
+                        <p>-50%</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="wateryeti.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>แก้วเยติ</h4><br>
+                    <h1>฿50</h1>
+                    <div class="discount">
+                        <s>100 </s>
+                        <p>-50%</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="mouse-aula.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>Aula เม้าส์เกม S20</h4><br>
+                    <h1>฿180</h1>
+                    <div class="discount">
+                        <s>249 </s>
+                        <p>-28%</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="clean.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>ผงซักฟอก</h4><br>
+                    <h1>฿30</h1>
+                    <div class="discount">
+                        <s>100 </s>
+                        <p>-70%</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="headphone.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h4>JBL หูฟังไร้สาย บลูทูธ Wave 200TWS</h4><br>
+                    <h1>฿2990</h1>
+                    <div class="discount">
+                        <s>4390 </s>
+                        <p>-55%</p>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div> <!--End Product Content-->
+        
+
+    </div> <!--End Content-->
+
+   
+</body>
+</html>
