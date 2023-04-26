@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Box {
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 20px;
+        }
+        .inBox{
+            border: 20px solid rgb(248, 162, 227);
+            background-color: orangered;
+            padding: 10px;
+        }
+        h3{
+            border: 20px solid orange;
+            background-color: green;
+            margin: 10px;
+        }
+        .inline {
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .text1{
+            background-color: yellow;
+        }
+        .text2{
+            background-color: orange;
+        }
+        .text3{
+            background-color: red;
+        }
+        .text4{
+            background-color: green;
+        }
+        .text5{
+            background-color: purple;
+        }
+        .block {
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .inline-block{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .none{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .vis{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .static{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .instatic{
+            border: 2px solid red;
+            background-color: rgb(247, 106, 106);
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            position: static;
+            opacity: 0.8;
+        }
+        .fixed{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .infixed{
+            border: 2px solid red;
+            background-color: rgb(247, 106, 106);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            opacity: 0.8;
+        }
+        .no{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .inno{
+            border: 2px solid red;
+            background-color: rgb(247, 106, 106);
+        }
+        .whrt{
+            border: 1px dashed black;
+            background-color: rgb(201, 228, 243);
+            padding: 10px;
+        }
+        .white{
+            padding: 100px;
+                background-color: white;
+        }
+        .white b {
+            border-radius: 50px;
+            background-color: gray;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            top: 1790px;
+            color: white;
+        }
+        .floatsongkran {
+            align-items: center;
+            color: rgb(214, 252, 177);
+            z-index: 10;
+        }
+
+        .box {
+            position: fixed;
+            background-color: palevioletred;
+            padding: 50px;
+            text-align: center;
+            transform: translateY(180%);
+            right: 50px;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <div class="Box">
+        <div class="inBox">
+            <h3>Simple Box</h3>
+        </div>
+    </div>
+    <h1>CSS Display</h1>
+    <h2>inline</h2>
+    <div class="inline">
+        <h4 style="display: inline;"><span class="text1">inline text1</span></h4>
+        <h4 style="display: inline;"><span class="text2">inline text2</span></h4>
+        <h4 style="display: inline;"><span class="text3">inline text3</span></h4>
+        <h4 style="display: inline;"><span class="text4">inline text4</span></h4>
+        <h4 style="display: inline;"><span class="text5">inline text5</span></h4>
+    </div>
+    <h2>block</h2>
+    <div class="block">
+        <h4 style="display: block;"><p class="text1">inline text1</p></h4>
+        <h4 style="display: block;"><p class="text2">inline text2</p></h4>
+        <h4 style="display: block;"><p class="text3">inline text3</p></h4>
+        <h4 style="display: block;"><p class="text4">inline text4</p></h4>
+        <h4 style="display: block;"><p class="text5">inline text5</p></h4>
+    </div>
+    <h2>inline-block</h2>
+    <div class="inline-block">
+        <h4 style="display: inline-block;">apple</h4>
+        <h4 style="display: inline-block;">orange</h4>
+        <h4 style="display: inline-block;">mango</h4>
+        <h4 style="display: inline-block;">watermelon</h4>
+    </div>
+    <h2>none</h2>
+    <div class="none">
+        <h4 style="display: none;">apple</h4>
+        <h4 style="display: none;">orange</h4>
+        <h4 style="display: none;">watermelon</h4>
+    </div>
+    <h2>display:none vs visibility:hidden</h2>
+    <div class="vis">
+        <h4>apple</h4>
+        <h4 style="visibility: hidden;">orange</h4>
+        <h4>watermelon</h4>
+    </div>
+    <h1>CSS Position</h1>
+    <h2>static</h2>
+    <div class="static">
+        <div class="instatic"></div>
+    </div>
+    <h2>absolute</h2>
+    <h2>fixed width/height</h2>
+    <div class="fixed">
+        <div class="infixed"></div>
+    </div>
+    <h2>no width/height</h2>
+    <div class="no">
+        <div class="inno"></div>
+    </div>
+    <h2>fixed width/height + right/top</h2>
+    <div class="whrt">
+        <div class="white">
+            <b>X</b>
+        </div>
+    </div>
+    <div class="floatsongkran">
+        <div class="box">
+            <h1>Songkran Festival 2023</h1>
+        </div>
+</body>
+</html>
