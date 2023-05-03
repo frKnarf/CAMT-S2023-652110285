@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 1px;
+            padding: 1px;
+        }
+        .Box{
+            border: 1px solid black;
+            border-radius: 10px;
+            position: absolute;
+            width: 50%;
+            height: 600px;
+            left: 25%;
+            top: 10%;
+            background-color: darkgreen;
+        }
+        .buttom{
+            position: absolute;
+            width: 50%;
+            height: 85px;
+            left: 25%;
+            top: 70%;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        .random-button{
+            width: 100%;
+            height: 85px;
+            font-size: 40px;
+        }
+        .content{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .card{
+            border: 2px solid black;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 1px black;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .red{
+            color: red;
+            border-color: red;
+        }
+        .card-title{
+            text-align: right;
+            font-size: 35px;
+            padding: 4px 10px;
+        }
+        .card-body{
+            margin-top: 28%;
+            text-align: center;
+            font-size: 60px;
+            flex-grow: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        // card number and type
+        var CARD_TYPE = ['♣', '♦', '♥', '♠']
+        var CARD_NUMBER = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K']
+
+        // random function
+        // max: number > 0
+        // return [0, max -1]
+        function random(max) {
+            return parseInt(Math.random() * max) % max
+        }
+
+        // how to use random function
+        function onClickRandomButton(){
+            var cardList = document.getElementsByClassName('card')
+           
+            for (var index = 0; index < cardList.length; index++){
+                var cardElm = cardList[index]
+
+                var cardType = CARD_TYPE[random(CARD_TYPE.length)]
+                var cardRank = CARD_NUMBER[random(CARD_NUMBER.length)]
+                console.log(cardType,cardRank)
+
+                var cardTitleElementList = cardElm.getElementsByClassName('card-title')[0]
+                cardTitleElementList.innerText = cardType
+
+                var cardBodyElementList = cardElm.getElementsByClassName('card-body')[0]
+                cardBodyElementList.innerText = cardRank
+
+                if (cardType === '♥' || cardType === '♦'){
+                    cardElm.classList.add('red')
+                } else {
+                    cardElm.classList.remove('red')
+                }
+                
+                
+            }
+        }
+    </script>
+
+    <div class="Box">
+        <div class="content">
+            <div class="card">
+                <div class="card-title">x</div>
+                <div class="card-body">y</div>
+            </div>
+            <div class="card">
+                <div class="card-title">x</div>
+                <div class="card-body">y</div>
+            </div>
+            <div class="card">
+                <div class="card-title">x</div>
+                <div class="card-body">y</div>
+            </div>
+            <div class="card">
+                <div class="card-title">x</div>
+                <div class="card-body">y</div>
+            </div>
+        </div>
+    </div>
+    <div class="buttom">
+        <button class="random-button" onclick="onClickRandomButton()">Click to Random</button>
+    </div>
+</body>
+</html>
